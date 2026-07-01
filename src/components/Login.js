@@ -8,8 +8,20 @@ const Login = ({ setIsLoggedIn }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
+      <div>
+        <label>Username: </label>
+        <input type="text" defaultValue="Name" />
+      </div>
+
+      <br />
+
+      <div>
+        <label>Password: </label>
+        <input type="password" />
+      </div>
+
+      <br />
+
       <button type="submit">Login</button>
     </form>
   );

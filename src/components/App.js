@@ -7,10 +7,10 @@ const App = () => {
 
   return (
     <div>
-      {/* Do not remove the main div */}
+      <h1>Parent Component</h1>
 
       {isLoggedIn ? (
-        <h1>You are logged in</h1>
+        <h2>You are logged in!</h2>
       ) : (
         <Login setIsLoggedIn={setIsLoggedIn} />
       )}
