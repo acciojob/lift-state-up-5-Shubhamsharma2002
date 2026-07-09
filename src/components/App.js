@@ -6,11 +6,15 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="App">
+    <div>
+      <h1>Parent Component</h1>
+
       <Login
         isLoggedIn={isLoggedIn}
         setIsLoggedIn={setIsLoggedIn}
       />
+
+      {isLoggedIn && <h2>User is Logged In</h2>}
     </div>
   );
 }
