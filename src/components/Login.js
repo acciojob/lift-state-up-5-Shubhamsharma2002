@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Login({ isLoggedIn, setIsLoggedIn }) {
+function Login({ setIsLoggedIn }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -10,32 +10,32 @@ function Login({ isLoggedIn, setIsLoggedIn }) {
     setIsLoggedIn(true);
   };
 
-  if (isLoggedIn) {
-    return <h2>Child Component</h2>;
-  }
-
   return (
-    <div>
-      <h2>Child Component</h2>
-
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Username: </label>
         <input
           type="text"
-          placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+      </div>
 
+      <br />
+
+      <div>
+        <label>Password: </label>
         <input
           type="password"
-          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+      </div>
 
-        <button type="submit">Login</button>
-      </form>
-    </div>
+      <br />
+
+      <button type="submit">Login</button>
+    </form>
   );
 }
 

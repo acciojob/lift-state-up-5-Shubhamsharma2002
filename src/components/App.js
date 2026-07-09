@@ -9,12 +9,11 @@ function App() {
     <div>
       <h1>Parent Component</h1>
 
-      <Login
-        isLoggedIn={isLoggedIn}
-        setIsLoggedIn={setIsLoggedIn}
-      />
-
-      {isLoggedIn && <h2>User is Logged In</h2>}
+      {isLoggedIn ? (
+        <p>You are logged in!</p>
+      ) : (
+        <Login setIsLoggedIn={setIsLoggedIn} />
+      )}
     </div>
   );
 }
